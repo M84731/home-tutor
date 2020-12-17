@@ -1,0 +1,104 @@
+
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Tutor view</title>
+      <style>
+          *{
+          padding:0;
+          margin:0;
+          outline:0;
+          }
+          .filter{
+          position:absolute;
+          top:0;
+          left:0;
+          right:0;
+          bottom:0;
+          z-index:1;
+          }
+
+
+
+           </style>
+  </head>
+  <body>
+
+  <header>
+       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" style="font-size:30px; font-family:'Courier New; "href="#"> Online Home Tutor</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <div class="mr-auto"></div>
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+
+              </li>
+
+
+
+
+            </ul>
+          </div>
+        </nav>
+
+</header>
+  <br>
+  <br>
+
+<section class="section-4">
+     {% for i in s %}
+     <form action="see" class="inline" method="post">
+                       {% csrf_token %}
+    <div class="container">
+
+        <div class="row justify-content-center">
+             <div class="inner">
+                 <div class="col-lg-6 mb-4">
+                        <div class="card shadow-lg" style="width: 20rem;">
+
+                          <img class="card-img-top" src="{{i.img.url}}">
+                              <div class="card-body text-center">
+                                  <h1 class="card-title">{{i.firstname}}
+         </h1>
+                                <h5 class="card-title">{{ i.subject }}</h5>
+                                  <h6 class="card-title">{{ i.hour}}</h6>
+ <input type="hidden" name="tvid" value={{i.id}} >
+                                  <button type="submit" class="btn btn-success">View Tutor-->> </button>
+                              </div>
+                        </div>
+                  </div>
+             </div>
+        </div>
+<br>
+    </div>
+         </form>
+    {% endfor %}
+
+
+
+</section>
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+
+    </script>
+  </body>
+</html>

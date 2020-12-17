@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'  %}">
+    </head>
+
+
+
+  <style>
+
+.carousel-inner img {
+
+  width: 1500px;
+  }
+
+  .carousel-caption h3 {
+
+    font-family :"Helvetica Neue", Helvetica, Arial, sans-serif.
+    margin-top: 10px 0 30px 0;
+    letter-spacing: 10px;
+    font-size: 50px;
+    color:red;
+  }
+.carousel-caption p {
+   font-family :"Helvetica Neue", Helvetica, Arial, sans-serif.
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;
+    font-size: 30px;
+    color:red;
+  }
+  }
+  @media (max-width: 400px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+   .navbar {
+    font-family: "Times New Roman", Times, serif;
+     margin-bottom: 4;
+    background-color:yellow;
+    border: 10;
+    font-size: 16px !important;
+    letter-spacing: 4px;
+    opacity:3.0;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: red!important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: white!important;
+
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+    font-size: 16px;
+  }
+  .dropdown-menu  a:hover {
+    background-color: #C84B4D !important;
+  }
+.section-3 .row  .card{
+margin:40px;
+margin-top:-40px;
+}
+.inner{
+overflow:hidden;
+}
+nn
+ </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" style="font-size:30px; font-family:'Courier New; "href="#"> Online Home Tutor</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <div class="mr-auto"></div>
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'reg' %}">Find a Tutor</a>
+              </li>
+
+
+                 <li class="nav-item">
+                <a class="nav-link" href="{% url 'ttr' %}">Become a Tutor</a>
+              </li>
+              </li>
+                 <li class="nav-item">
+                <a class="nav-link" href="{% url 'logins' %}">Login</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+</header>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="{% static 'images/profile1.jpg '%}"  >
+        <div class="carousel-caption">
+          <h3> Personal and Online Tutors</h3>
+          <p> Find Private Tutor</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="{% static 'images/profile4.jpg '%}"  >
+        <div class="carousel-caption">
+          <h3>Personal and Online Tutors</h3>
+          <p>Time To Learn</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src ="{% static 'images/profile6.jpg '%}" >
+        <div class="carousel-caption">
+          <h3>Personal and Online Tutors</h3>
+          <p>Top Tutoring Service</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+<section class="section2 mt-4">
+    <div class="jumbotron jumbotron-fluid">
+  <div class="container text-center">
+    <h1 class="display-4" style="color:green;" >Most Popular Trending Subjects</h1>
+    <p class="lead" style="color:black;">We guarantee that you’ll be satisfied with our first lesson.
+If not, we’ll cover it.</p>
+  </div>
+</div>
+
+</section>
+<section class="section-3">
+    <div class="container">
+        <div class="row justify-content-center">
+                <div class="card shadow-lg" >
+                      <div class="card-body" >
+                        <h3 style="color:black;">PROFESSIONAL TUTORS</h3>
+
+                      </div>
+                </div>
+                <div class="card shadow-lg" >
+                      <div class="card-body">
+                        <h3 style="color:black;">REAL RESULTS ONLY<h3>
+
+                      </div>
+                </div>
+                <div class="card shadow-lg" >
+                      <div class="card-body">
+                        <h3 style="color:black;">UNIVERSITY APPROVED</h3>
+
+                      </div>
+                </div>
+
+        </div>
+    </div>
+</section>
+<section class="section-4">
+    <div class="container">
+        <div class="row justify-content-center">
+             <div class="inner">
+                 <div class="col-md-4">
+                        <div class="card shadow-lg" style="width: 35rem;">
+                          <img class="card-img-top" src="{%static 'images/math3.jpg ' %}" >
+                              <div class="card-body text-center">
+                                <h5 class="card-title">MATHEMATICS</h5>
+                                  <a href="#" class="btn btn-success">EXPLORE-->> </a>
+                              </div>
+                        </div>
+                  </div>
+             </div>
+
+
+            <div class="inner">
+                 <div class="col-md-4">
+                        <div class="card shadow-lg" style="width: 35rem;">
+                          <img class="card-img-top" src="{%static 'images/code1.jpeg ' %}" >
+                              <div class="card-body text-center">
+                                <h5 class="card-title">PROGRAMMING</h5>
+                                  <a href="#" class="btn btn-success">EXPLORE-->> </a>
+                              </div>
+                        </div>
+                  </div>
+             </div>
+            <div class="inner">
+                 <div class="col-md-4">
+                        <div class="card shadow-lg" style="width: 35rem;">
+                          <img class="card-img-top" src="{%static 'images/bio1.jpeg ' %}" >
+                              <div class="card-body text-center">
+                                <h5 class="card-title">BIOLOGY</h5>
+                                   <a href="#" class="btn btn-success">EXPLORE-->> </a>
+                              </div>
+                        </div>
+                  </div>
+             </div>
+        <div class="inner">
+                         <div class="col-md-4">
+                             <br>
+                             <br>
+                             <br>
+                                <div class="card shadow-lg" style="width: 35rem;">
+                                  <img class="card-img-top" src="{%static 'images/org.jpeg ' %}" >
+                                      <div class="card-body text-center">
+                                          <br>
+                                        <h5 class="card-title">CHEMISTRY</h5>
+
+                                        <a href="#" class="btn btn-success">EXPLORE-->> </a>
+                                      </div>
+                                </div>
+                          </div>
+                     </div>
+                        <div class="inner">
+                             <div class="col-md-4">
+                                 <br>
+                                 <br>
+                                 <br>
+                                    <div class="card shadow-lg" style="width: 35rem;">
+                                      <img class="card-img-top" src="{%static 'images/bus1.jpeg ' %}" >
+                                          <div class="card-body text-center">
+                                            <h5 class="card-title">BUSINESS STUDY</h5>
+
+                                            <a href="#" class="btn btn-success">EXPLORE-->> </a>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+            <div class="inner">
+                         <div class="col-md-4">
+                             <br>
+                             <br>
+                             <br>
+                                <div class="card shadow-lg" style="width: 35rem;">
+                                  <img class="card-img-top" src="{%static 'images/cmp1.jpeg ' %}" >
+                                      <div class="card-body text-center">
+                                        <h5 class="card-title">COMPUTER SCIENCE</h5>
+
+                                        <a href="#" class="btn btn-success">EXPLORE-->> </a>
+                                      </div>
+                                </div>
+                          </div>
+                     </div>
+
+
+        </div>
+    </div>
+</section>
+
+<footer>
+
+        <div class="jumbotron jumbotron-fluid text-center mt-5 " >
+             <h2 style="color:navy-blue;"><strong>ONLINE HOME BOOKING TUTOR SYSTEM</strong></h2>
+
+        </div>
+
+
+    </div>
+</div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

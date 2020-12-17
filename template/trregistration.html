@@ -1,0 +1,146 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+ <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'  %}">
+      <style>
+table{
+color:black;
+border-collapse:collapse;
+font-size:17px;
+font-family:serif;
+}
+          #name{
+           width:130%;
+          padding:10px;
+          border-radius:2%;
+          outline:0;
+          border:1px solid black;
+          }
+h1{
+margin:2px;
+padding:10px;
+text-align:center;
+}
+
+          </style>
+    </head>
+
+
+  <body>
+  <h1>FILL UP YOUR PROFILE INFORMATION</h1>
+  <br>
+  <br>
+
+
+          <form action="trreg"  method="post" enctype="multipart/form-data">
+     {% csrf_token %}
+                 <table align="center" cellpadding="20">
+           <tr>
+              <td>First Name:</td>
+              <td><input type="text" id="name" name="first"</td>
+           </tr>
+          <br>
+          <br>
+            <tr>
+              <td>Last Name:</td>
+              <td><br><input type="text" id="name" name="last"</td>
+           </tr>
+          <tr>
+              <td>Date of Birth:</td>
+              <td><br><input type="date" id="name" name="DOB"</td>
+           </tr>
+           <tr>
+                <td>Address:</td>
+                <td><br><textarea rows="3" cols="30" name="add"></textarea></td>
+            </tr>
+
+          <tr>
+              <td>Pincode:</td>
+              <td><br><input type="number" id="name" name="pin"</td>
+           </tr>
+
+          <tr>
+              <td>city:</td>
+              <td><br><input type="text" id="name" name="cit"</td>
+           </tr>
+          <tr>
+              <td>State:</td>
+              <td><br><input type="text" id="name" name="st"</td>
+           </tr>
+
+            <tr>
+              <td>Email:</td>
+              <td><br><input type="email" id="name" name="em"</td>
+           </tr>
+            <tr>
+
+              <td>Subject:</td>
+              <td><br><input type="text" id="name" name="sub"</td>
+
+            </tr>
+            <tr>
+              <td>Total Experience as a tutor:</td>
+              <td><br><input type="number" id="name" name="expc"</td>
+           </tr>
+          <tr>
+              <td>Date of join:</td>
+              <td><br><input type="date" id="name" name="DOJ"</td>
+           </tr>
+            <tr>
+                <td><br>Willing to provide Online tutions </td>
+                <td><br>  <input  type="radio" name="ok" > Yes<input type="radio" name="ok" >No</td>
+            </tr>
+                     <tr>
+                <td>why you loves tutoring:</td>
+                <td><br><textarea rows="3" cols="30" name="tut"></textarea></td>
+            </tr>
+                       <tr>
+                <td>Education Background:</td>
+                <td><br><textarea rows="3" cols="30" name="back"></textarea></td>
+            </tr>
+                     <tr>
+                <td>Hobbies:</td>
+                <td><br><input type="text" id="name" name="ho"</td>
+            </tr>
+
+            <tr>
+                <td>Recommended fee for per hour</td>
+                  <td><br><input type="number" id="name" name="hr"</td>
+            </tr>
+                     <br>
+<tr>
+    <td>Enter your youtube video for demo Class :</td>
+        <td>
+            <br><input type="text" id="name" name="video">
+        </td>
+</tr>
+<tr>
+    <td>Add your profile photo *</td>
+        <td>
+            <br><input type="file" id="name" name="fileup">
+        </td>
+</tr>
+
+<tr>
+    <td align="center" colspan="2">
+        <br><input type="submit" value="Submit"> &nbsp;&nbsp;
+    </td>
+</tr>
+        </table>
+</form>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

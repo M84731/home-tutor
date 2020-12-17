@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOOKING</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'  %}">
+    <script>
+function myFunction() {
+  alert("Are you sure to confirm this class.Then Will contact you soon..!!");
+}
+</script>
+    <style>
+    *{
+    margin:0px;
+    padding:0px;
+    }
+    body{
+        background-image: url("{% static 'images/now.jpg ' %}");
+        background-size:cover;
+        background-attachment:fixed;
+        font-family:new times romain;
+         }
+    h1{
+    font-size:50px;
+    color:black;
+    margin-top:200px;
+    margin-left:100px;
+    }
+    p{
+    margin-left:20px;
+    font-size:18px;
+    color:black;
+    }
+h3{
+font-size:25px;
+color:black;
+}
+.glyphicon-pencil{
+font-size:35px;
+color:black;
+float:right;
+margin-top:5px;
+}
+.col-md-5{
+margin-top:80px;
+box-shadow:-1px 1px 60px10px black;
+}
+.label{
+font-weight:normal;
+margin-top:15px;
+color:black;
+font-size:19px;
+}
+.form-control{
+background:transparent;
+border-radius:2px;
+border:2px;
+border-bottom:1px solid black;
+font-size:18px;
+margin-top:15px;
+margin-left:20px;
+height:40px;
+color:black;
+}
+small{
+font-size:18px;
+color:black;  x+-s
+}
+input[type="radio"]{
+margin-top:27px;
+margin-left:20px;
+}
+option{
+color:black;
+font-size:20px;
+}
+.btn-info{
+margin-top:20px;
+font-size:18px;
+width:120px;
+margin-left:120px;
+margin-bottom:20px;
+color:black;
+}
+
+
+     </style>
+</head>
+<body>
+
+
+<div class="container">
+<div class="row">
+    <div class="col-md-7">
+    <h1 class="text-left">BOOKING NOW--</h1>
+        <p class="text-left"></p>
+    </div>
+    <div class="col-md-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="text-left">Booking  Form</h3>
+            </div>
+            <div class="col-md-6">
+                <span class="glyphicon glyphicon-pencil">
+
+                </span>
+            </div>
+
+        </div>
+        <hr>
+
+        <form action="book1"  method="POST">
+     {% csrf_token %}
+
+       <div class="row">
+           <label class="label col-md-2 control-label"> Subject: </label>
+           <div class="col-md-10">
+              <select class="form-control" name="st">
+                <option > Select</option>
+                <option v> Chemistry</option>
+                <option > Physics</option>
+                  <option >Mathematics</option>
+                  <option > Biology</option>
+                </select>
+           </div>
+       </div>
+                    <br>
+                    <br>
+                    <div class="row">
+            <label class="label col-md-2 control-label">Class:</label>
+            <div class="col-md-10">
+                <select class="form-control" name="cl">
+                    <option > Select</option>
+                    <option > Junior School</option>
+                    <option > Secondary School</option>
+                    <option > High School</option>
+                </select>
+            </div>
+        </div>
+                    <br>
+                    <br>
+                    <div class="row">
+            <label class="label col-md-2 control-label">Board:</label>
+            <div class="col-md-10">
+                <select class="form-control" name="bod">
+                    <option  > Select</option>
+                    <option > CBSE</option>
+                    <option > STATE</option>
+                    <option > ICSE</option>
+                </select>
+            </div>
+        </div>
+                    <br>
+                    <br>
+                    <div class="row">
+            <label class="label col-md-2 control-label">City:</label>
+            <div class="col-md-10">
+                <select class="form-control" name="cy">
+                    <option  > Select</option>
+                    <option> Kottayam</option>
+                    <option >Ernakulam</option>
+                    <option>Kannur</option>
+                </select>
+            </div>
+                        <div class="row">
+            <label class="label col-md-2 control-label">From date:</label>
+            <div class="col-md-10">
+                <input type="date" class="form-control" name="do" >
+            </div>
+        </div>
+                        <div class="row">
+            <label class="label col-md-2 control-label">Days:</label>
+            <div class="col-md-10">
+                 <input type="number" class="form-control" name="da" >
+
+            </div>
+        </div>
+
+        <div class="row">
+           <label class="label col-md-2 control-label"> Hours:</label>
+           <div class="col-md-10">
+               <input type="number" class="form-control" name="hr">
+           </div>
+       </div>
+
+        <input type="submit" class="btn btn-info" value="Confirm" onclick="myFunction()">
+            </form>
+    </div>
+</div>
+</div>
+</body>
+</html>
